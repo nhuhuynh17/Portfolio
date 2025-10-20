@@ -1,0 +1,223 @@
+/* General Reset and Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Light background for the page */
+  color: #333;
+  font-size: 14px;
+}
+
+/* Header and Navigation */
+.header-container {
+  background-color: #a0522d; /* Sienna/Brown color for the top bar */
+  color: white;
+}
+
+header h1 {
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  padding: 10px 20px;
+  margin: 0;
+  color: #7f7d07; /* Gold-like base color */
+  text-shadow: -4px -5px 5px #ffffff, 0 0 10px #ff8c00;
+  letter-spacing: 6px;
+}
+
+nav {
+  background-color: #ffffff; /* Burly Wood/Light Brown for nav background */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  padding: 0 20px;
+}
+
+nav ul li a {
+  color: #a44f0f;
+  text-decoration: none;
+  padding: 8px 15px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+nav ul li:first-child a {
+  background-color: #ffffff; /* Khaki/Light Yellow for 'Home' to match the image */
+  color: #a44f0f;
+}
+
+nav ul li a:hover {
+  background-color: #a0522d;
+  color: white;
+}
+
+/* Banner Area */
+.banner {
+  /* Simulating the image strip using a background */
+  height: 100px; /* Approximate height */
+  background-image: url("./banner.jpg"); /* Replace with actual image URL */
+  background-size: cover;
+  background-position: center;
+  border-bottom: 5px solid #6b8e23; /* Olive Drab/Green separator */
+  flex: 50%;
+  padding: 20px;
+}
+
+/* Main Content Layout */
+.content-wrapper {
+  display: flex;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.main-content {
+  flex: 2.5; /* Takes up more space than the sidebar */
+  padding-right: 20px;
+}
+
+.sidebar {
+  flex: 1; /* Takes up less space */
+  padding-left: 20px;
+}
+
+/* Main Content Styling */
+.main-content h2 {
+  color: #c18e10; /* Sienna */
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+
+  padding-bottom: 5px;
+}
+
+.main-content p {
+  color: #c18e10; /* Saddle Brown */
+  font-style: italic;
+  font-style: bold;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.main-content p strong {
+  font-weight: bold;
+}
+/* FORM */
+
+.signup-form input {
+  border: none; /* Xóa tất cả viền */
+  border-bottom: 2px solid #868484; /* Chỉ tạo viền dưới */
+  outline: none; /* Xóa viền khi focus */
+  padding: 8px 0; /* Khoảng cách trong input */
+  width: 100%; /* Full width input */
+  font-size: 16px;
+  margin-bottom: 20px; /* Khoảng cách giữa các input */
+}
+
+.signup-form input:focus {
+  border-bottom-color: #353738; /* Màu viền khi focus */
+}
+
+button {
+  background-color: #7e8000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+
+/* divider */
+.divider {
+  width: 0.5px; /* Độ dày đường kẻ */
+  background-color: #b9b6b6; /* Màu đường kẻ */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #ffff; /* Floral White/Creamy background for sidebar */
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: 30px;
+}
+
+.sidebar h3 {
+  color: #32190d; /* Sienna */
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  letter-spacing: 3px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.links-section {
+  margin-bottom: 20px;
+  background-color: #faebd6;
+  border-radius: 15px 15px 0 0;
+  padding: 10px;
+}
+.links-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.links-section ul li {
+  margin-bottom: 5px;
+  color: #8b4513; /* Saddle Brown */
+}
+
+.links-section .square {
+  color: #cc805d; /* Lighter brown/orange for the bullet points */
+  margin-right: 5px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.more-info-section {
+  margin-top: 20px;
+}
+
+.info-content {
+  gap: 10px;
+  overflow: hidden;
+}
+
+.leaf-image {
+  width: 80px; /* Small image size */
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  padding: 8px;
+  float: left;
+  object-fit: cover;
+}
+
+.more-info-section p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  background-image: url("./footer.jpg");
+  background-color: #6b8e23; /* Olive Drab/Green */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: relative;
+}

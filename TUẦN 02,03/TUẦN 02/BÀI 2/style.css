@@ -1,0 +1,150 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#container {
+  /* width: 960px; */
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.header {
+  width: 100%; /* full chiều rộng trình duyệt */
+}
+
+.header img {
+  width: 100%; /* giãn full ảnh theo chiều ngang */
+  height: auto; /* giữ tỉ lệ */
+  display: block; /* bỏ khoảng trắng dưới ảnh */
+}
+
+/* --- Thanh menu --- */
+.navbar {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 12px 0;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-family: Georgia, serif;
+}
+
+.navbar a:hover {
+  color: #000;
+}
+
+section.courses {
+  float: left;
+  width: 659px;
+  border-right: 1px solid #eeeeee;
+}
+
+article {
+  clear: both;
+  overflow: auto;
+  width: 100%;
+}
+
+hgroup {
+  margin-top: 40px;
+}
+
+figure {
+  float: left;
+  width: 290px;
+  height: 220px;
+  padding: 5px;
+  margin: 20px;
+  border: 1px solid #eeeeee;
+}
+
+figcaption {
+  font-size: 90%;
+  text-align: left;
+}
+
+h3 {
+  color: #c37171;
+}
+
+p {
+  font-size: 20px;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+aside {
+  width: 230px;
+  float: left;
+  padding: 0px 0px 0px 20px;
+}
+
+aside section a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+aside section a:hover {
+  color: #985d6a;
+  background-color: #efefef;
+}
+
+a {
+  color: #985d6a;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+h2 {
+  margin: 10px 0px 5px 0px;
+  padding: 0px;
+}
+
+h3 {
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+
+aside h2 {
+  padding: 30px 0px 10px 0px;
+  color: #de6581;
+}
+
+.contact-details p {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+footer {
+  font-size: 100%;
+  padding: 7px 0px 0px 20px;
+  clear: both;
+  background-color: #a19e99;
+}

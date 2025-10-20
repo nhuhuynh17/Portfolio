@@ -1,0 +1,269 @@
+/*  */
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #333;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-left: 200px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+p {
+  color: #a3353a;
+}
+
+.header {
+  position: relative;
+  height: 100px;
+  padding: 10px 20px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+
+h6 {
+  /* Đặt ONLINE ở góc trên bên phải */
+  position: absolute;
+  top: 15px; /* Điều chỉnh vị trí từ trên xuống */
+  right: 200px; /* Điều chỉnh vị trí từ phải vào */
+
+  /* Kiểu dáng hộp nền ONLINE */
+  background-color: #d69e2e; /* Màu vàng nâu */
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 2px 5px;
+  margin: 0;
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif; /* Font không chân */
+}
+
+h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 50px;
+  font-style: normal;
+  text-align: right;
+  margin-right: 150px;
+  margin-top: 30px;
+}
+
+.content-divider {
+  border: none; /* Xóa viền mặc định của trình duyệt */
+  border-top: 1px solid #e7d8c0; /* Tạo đường kẻ 1px màu nâu nhạt */
+  max-width: 100%; /* Chiếm toàn bộ chiều rộng khối cha */
+  margin: 5px auto; /* Khoảng cách trên dưới và căn giữa */
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 200px;
+  padding: 20px 0;
+  flex-shrink: 0;
+
+  /* 1. Đặt ảnh nền (Ảnh luôn nằm dưới nội dung) */
+  background-image: url("./image_sidebar.jpg"); /* Thay đổi đường dẫn tới tệp PNG của bạn */
+
+  /* 2. Thiết lập hiển thị ảnh */
+  background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ chiều cao/rộng */
+  background-repeat: repeat-y; /* Không lặp lại ảnh */
+  background-position: right; /* Căn giữa ảnh trong sidebar */
+
+  /* 3. Xóa đường viền nếu ảnh nền đã có hiệu ứng viền xé */
+  border-right: none;
+
+  /* Đảm bảo nội dung (li, a) có thể đọc được */
+  color: #4b3e34;
+  font-size: 1em;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+
+.sidebar li {
+  padding: 5px 20px;
+  /* Giữ nguyên các đường kẻ phân cách mỏng */
+  border-top: 1px dashed rgba(192, 176, 157, 0.5); /* Dùng rgba để tạo độ trong suốt */
+  border-bottom: 1px dashed rgba(192, 176, 157, 0.5);
+  margin-top: -1px;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: #8e1190;
+  display: block;
+}
+.sidebar ul li a:hover {
+  text-decoration: underline; /* Thêm gạch chân */
+}
+
+/* MAIN */
+/* MAIN-CONTAINER: Đảm bảo không có margin trên */
+.main-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto; /* Đảm bảo margin-top là 0 */
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.content {
+  flex-grow: 90%;
+  padding: 30px;
+  text-align: justify;
+}
+
+h2 {
+  color: #cc6600; /* Màu cam nâu cho tiêu đề */
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+/* Bố cục bên trong phần Preserving Your Memories (văn bản và Basic Materials) */
+.memories-layout {
+  display: flex;
+  gap: 30px; /* Khoảng cách giữa văn bản và hộp Basic Materials */
+  margin-top: 0px;
+}
+
+.text-content {
+  flex-basis: 65%; /* Văn bản chiếm 65% */
+}
+
+.text-content p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Khối Basic Materials */
+.basic-materials {
+  flex-basis: 40%; /* Hộp Basic Materials chiếm 35% */
+
+  /* Kiểu dáng hộp */
+  background-color: #fefff1; /* Nền vàng nhạt hơn */
+  border-right: 5px solid #cc6600; /* Viền màu cam nâu */
+  border-bottom: 5px solid #cc6600;
+  border-left: 5px solid #fea701;
+  border-top: 5px solid #fea701;
+  padding: 15px; /* Khoảng đệm bên trong hộp */
+
+  /* Đảm bảo hộp nằm sát đỉnh của nội dung */
+  align-self: flex-start;
+}
+
+/* Tiêu đề bên trong hộp (Sử dụng h2) */
+.basic-materials h2 {
+  color: #cc6600; /* Màu cam nâu */
+  font-size: 1.2em; /* Kích thước nhỏ hơn h2 chính của trang */
+  margin-top: 0;
+  margin-bottom: 10px; /* Khoảng cách với danh sách ul */
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cc6600; /* Đường gạch chân màu cam nâu */
+}
+
+/* Danh sách bên trong hộp */
+.basic-materials ul {
+  list-style-type: disc; /* Dùng dấu chấm mặc định */
+  padding-left: 20px;
+  margin: 0; /* Xóa margin-top: 10px cũ */
+}
+
+.basic-materials li {
+  margin-bottom: 5px;
+  line-height: 1.4;
+  color: #c84141; /* Màu chữ đen/xám */
+  font-weight: bold;
+  font-size: 1em;
+}
+/* ================================================= */
+/* === FOOTER === */
+/* ================================================= */
+.text {
+  color: #fea701;
+  font-family: Georgia, serif;
+  font-size: 1em;
+}
+.footer {
+  text-align: center;
+  padding: 10px 20px;
+
+  border-top: 4px solid #f6a63b;
+}
+
+/* start */
+
+.sample img {
+  width: 100%;
+  height: 100%;
+}
+
+/* START.HTML/
+
+/* 1. Thiết lập vị trí cho khối chứa chính */
+.sample {
+  /* PHẢI CÓ: Đặt vị trí tương đối cho khối chính để các khung con (absolute) 
+     định vị theo nó, chứ không phải theo toàn bộ body. */
+  position: relative;
+  flex-grow: 1;
+  padding: 20px 40px 20px 40px;
+}
+
+/* 2. Định dạng chung cho 3 khung chữ */
+.callout-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 250px; /* Chiều rộng cố định */
+  position: absolute; /* Quan trọng: Dùng để định vị chính xác */
+  z-index: 10;
+  font-size: 13px;
+  line-height: 1.4;
+  /* Thêm bóng đổ nhẹ để tạo cảm giác nổi */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. Định vị từng khung theo ảnh màn hình */
+
+/* Khung 1: Góc trên bên phải */
+.callout-box.top-right {
+  top: 100px; /* Điều chỉnh vị trí từ đỉnh của khối .sample */
+  right: 10px; /* Điều chỉnh vị trí từ bên phải của khối .sample */
+  width: 150px; /* Điều chỉnh chiều rộng nhỏ hơn */
+  box-shadow: -10px -5px 10px 0 #3d3939;
+}
+
+/* Khung 2: Góc dưới bên trái */
+
+.callout-box.bottom-left {
+  /* Bạn cần điều chỉnh vị trí top cho phù hợp với chiều cao của ảnh */
+  top: 450px;
+  left: -20px; /* Đẩy nó sang trái, chồng lên thanh sidebar */
+  width: 200px; /* Điều chỉnh chiều rộng nhỏ hơn */
+  box-shadow: -10px -5px 10px 0 #3d3939;
+}
+
+/* Khung 3: Góc dưới bên phải */
+.callout-box.bottom-right {
+  bottom: 100px; /* Khoảng cách từ đáy của khối .sample */
+  right: 10px;
+  width: 200px; /* Điều chỉnh chiều rộng */
+  box-shadow: -10px -5px 10px 0 #3d3939;
+}

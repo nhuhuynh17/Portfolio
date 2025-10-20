@@ -1,0 +1,73 @@
+h1 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bolder;
+  color: #a52a2a;
+  text-transform: uppercase;
+  text-shadow: 0px 20px 20px #a52a2a;
+}
+.menu-bar {
+  background-color: #eb9999; /* màu nền hồng nhạt */
+  display: flex; /* bật flexbox */
+  justify-content: center; /* căn giữa theo chiều ngang */
+  align-items: center; /* căn giữa theo chiều dọc */
+  gap: 15px; /* khoảng cách giữa các phần tử */
+  padding: 10px;
+}
+
+.menu-bar a {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-right: 2px solid #15030c; /* đường kẻ ngăn cách */
+}
+.menu-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.menu-bar a:last-child {
+  border-right: none;
+}
+
+.menu-bar input {
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.menu-bar button {
+  padding: 4px 8px;
+  background-color: white;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+h2 {
+  color: #a62426;
+  background-color: #f5f5db;
+  font-size: 30px;
+  margin: 0;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+li {
+  a {
+    color: red;
+    font-weight: bold;
+  }
+}
+.back {
+  color: red;
+  font-weight: bold;
+}
+
+.b {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #d08c04;
+}
