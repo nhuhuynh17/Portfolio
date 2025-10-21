@@ -76,6 +76,41 @@ body {
 /* -------------------------
    Header / Navbar
    ------------------------- */
+header {
+  padding: 1.5rem 0 1rem; /* giảm bớt padding top/bottom */
+  min-height: auto !important;
+}
+
+/* Giữ cho avatar nhỏ gọn hơn */
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+}
+
+/* Căn giữa text và avatar gọn gàng */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Đảm bảo nav không đẩy banner xuống */
+.navbar,
+nav {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Nếu vẫn thấy header “nở to” */
+@media (min-width: 768px) {
+  header {
+    padding: 1rem 0;
+  }
+}
 
 .site-header {
   position: fixed;
