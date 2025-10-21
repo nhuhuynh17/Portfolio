@@ -118,6 +118,22 @@ style.innerHTML = `
 }`;
 document.head.appendChild(style);
 
+// Khi resize cửa sổ → tự reset menu về đúng trạng thái
+window.addEventListener("resize", () => {
+  const nav = document.querySelector(".nav");
+
+  if (window.innerWidth > 920) {
+    // 🔹 Khi về chế độ desktop: reset hoàn toàn
+    document.body.classList.remove("nav-open");
+    nav.removeAttribute("style"); //  Xóa toàn bộ inline CSS
+  } else {
+    // 🔹 Khi về chế độ mobile: ẩn menu
+    if (!document.body.classList.contains("nav-open")) {
+      nav.style.display = "none";
+    }
+  }
+});
+
 /* --- Gửi form liên hệ qua Fetch API (nâng cao, không reload trang) --- */
 const form = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");

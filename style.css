@@ -139,6 +139,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .nav-link {
   text-decoration: none;
   padding: 0.5rem 0.7rem;
@@ -155,8 +156,15 @@ body {
 .btn-toggle {
   display: none;
   background: none;
-  border: 0;
-  font-size: 1.2rem;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-toggle:hover {
+  transform: scale(1.2);
 }
 
 /* -------------------------
@@ -387,7 +395,7 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
-/* ✨ Mục tiêu tương lai */
+/* Mục tiêu tương lai */
 .goal {
   background: linear-gradient(135deg, #fff6e9 0%, #ffe6cc 100%);
   border-radius: 22px;
@@ -452,7 +460,7 @@ body {
   box-shadow: 0 3px 10px rgba(255, 167, 38, 0.25);
 }
 
-/* 🌈 Sở thích cá nhân */
+/* Sở thích cá nhân */
 .hobby {
   background: linear-gradient(135deg, #ffe4f0 0%, #d7fff5 100%);
   border-radius: 22px;
@@ -524,7 +532,7 @@ body {
   box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
 }
 
-/* ✨ Hiệu ứng ánh sáng pastel */
+/* Hiệu ứng ánh sáng pastel */
 @keyframes shine {
   0% {
     transform: translateX(-50%);
@@ -591,7 +599,7 @@ body {
 .skill-fill {
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, #ffd500, #ff8c42); /* vàng → cam nổi bật */
+  background: linear-gradient(90deg, #ffd500, #ff8c42); /* vàng → cam */
   border-radius: 999px;
   transition: width 1s ease-in-out;
 }
@@ -757,7 +765,6 @@ body {
 }
 
 /* contact-info card */
-/* 🎀 Contact Info Card */
 .contact-info.card {
   background: linear-gradient(135deg, #ffe4f0 0%, #d7fff5 100%);
   border-radius: 20px;
@@ -859,13 +866,63 @@ body {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
   .nav {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 16px 16px;
+    animation: slideDown 0.3s ease forwards;
+    backdrop-filter: blur(12px);
+    z-index: 999;
   }
+
   .btn-toggle {
     display: inline-block;
   }
+
+  /* Khi bấm nút ☰ → hiện menu */
+  body.nav-open .nav {
+    display: flex;
+  }
+
+  /* Hiệu ứng trượt xuống mượt */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
+
+/* Khi mở rộng màn hình lại → menu ngang như cũ */
+@media (min-width: 921px) {
+  .nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    box-shadow: none;
+    animation: none;
+  }
+
+  .btn-toggle {
+    display: none;
+  }
+}
+
 @media (max-width: 520px) {
   .brand-avatar {
     width: 44px;
