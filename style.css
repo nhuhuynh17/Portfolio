@@ -33,9 +33,9 @@ body {
   height: 100%;
 
   /* gradient trôi lửng */
-  background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
-  background-size: 400% 400%;
-  animation: gradientFlow 15s ease infinite;
+  background: linear-gradient(135deg, #dc567a, #80e8f6);
+  background-size: 300% 300%;
+  animation: gradientFlow 20s ease infinite;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -76,6 +76,7 @@ body {
 /* -------------------------
    Header / Navbar
    ------------------------- */
+
 .site-header {
   position: fixed;
   top: 0;
@@ -162,6 +163,11 @@ body {
 /* -------------------------
    HERO / BANNER
    ------------------------- */
+.hero,
+.banner {
+  padding: 60px 0 40px;
+}
+
 .hero {
   padding: 3.4rem 0;
   background: linear-gradient(
@@ -228,10 +234,10 @@ body {
   box-shadow: var(--shadow);
   border: 6px solid transparent;
   background: linear-gradient(135deg, #ffd6e0, #dffaf1) padding-box,
-    radial-gradient(circle at top left, #ffb3c9, #b0f2d3) border-box; /* 🎨 viền kiểu vệt màu hội họa */
+    radial-gradient(circle at top left, #ffb3c9, #b0f2d3) border-box;
   transform: translateY(0);
   transition: transform 400ms var(--ease), box-shadow 300ms var(--ease);
-  cursor: pointer; /* 🖱️ bấm được */
+  cursor: pointer; /* bấm được */
 }
 
 /* Hiệu ứng ánh màu khi chạm chuột */
@@ -327,7 +333,7 @@ body {
 }
 
 /* Photo grid */
-/* Hiệu ứng chồng ảnh dễ thương */
+/* Hiệu ứng chồng ảnh*/
 .photo-grid {
   position: relative;
   width: 380px;
@@ -387,7 +393,7 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
-/* ✨ Mục tiêu tương lai */
+/* Mục tiêu tương lai */
 .goal {
   background: linear-gradient(135deg, #fff6e9 0%, #ffe6cc 100%);
   border-radius: 22px;
@@ -757,7 +763,6 @@ body {
 }
 
 /* contact-info card */
-/* 🎀 Contact Info Card */
 .contact-info.card {
   background: linear-gradient(135deg, #ffe4f0 0%, #d7fff5 100%);
   border-radius: 20px;

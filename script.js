@@ -9,24 +9,29 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
     const href = link.getAttribute("href");
     if (!href || href === "#" || !document.querySelector(href)) return;
+
     e.preventDefault();
+    // Cuộn mượt đến phần tương ứng
     document.querySelector(href).scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
-    // Tự đóng menu trên mobile sau khi nhấn
+
+    // Đóng menu trên mobile sau khi chọn
     document.body.classList.remove("nav-open");
     document.querySelector(".nav").style.display = "";
   });
 });
 
-/* --- Mở / Đóng navbar trên mobile --- */
+/* --- Toggle Navbar trên mobile --- */
 const mobileBtn = document.getElementById("mobileMenuBtn");
 if (mobileBtn) {
   mobileBtn.addEventListener("click", () => {
     const nav = document.querySelector(".nav");
     document.body.classList.toggle("nav-open");
+
     if (document.body.classList.contains("nav-open")) {
+      // Hiển thị menu với animation nhẹ
       nav.style.display = "flex";
       nav.style.flexDirection = "column";
       nav.style.alignItems = "center";
@@ -37,22 +42,24 @@ if (mobileBtn) {
   });
 }
 
-/* --- Animation thanh kỹ năng (skill bars) --- */
+/* --- Animation thanh kỹ năng (Skill bars) --- */
 function animateSkills() {
   document.querySelectorAll(".skill-bar").forEach((bar) => {
     const level = bar.getAttribute("data-level") || 0;
     const fill = bar.querySelector(".skill-fill");
+    // Tăng chiều rộng dần theo level
     setTimeout(() => {
       fill.style.width = Math.min(100, Math.max(0, level)) + "%";
     }, 200);
   });
 }
 
-/* Kích hoạt hiệu ứng kỹ năng khi cuộn đến phần đó */
+/* --- Kích hoạt hiệu ứng kỹ năng khi cuộn đến phần đó --- */
 function initSkillScroll() {
   const skillsSection = document.getElementById("skills");
   if (!skillsSection) return;
   let done = false;
+
   window.addEventListener("scroll", () => {
     const rect = skillsSection.getBoundingClientRect();
     if (!done && rect.top < window.innerHeight - 120) {
@@ -63,9 +70,10 @@ function initSkillScroll() {
 }
 initSkillScroll();
 
-/* --- Xử lý form liên hệ (demo, không cần backend) --- */
+/* --- Xử lý form liên hệ (Demo - dùng mailto) --- */
 function submitContact(ev) {
   ev.preventDefault();
+
   const name = document.getElementById("name")?.value.trim();
   const email = document.getElementById("email")?.value.trim();
   const message = document.getElementById("message")?.value.trim();
@@ -75,14 +83,14 @@ function submitContact(ev) {
     return;
   }
 
-  // Mở mail client để gửi tin nhắn
+  // Tạo mail tự động
   const subject = encodeURIComponent(`Liên hệ từ portfolio của ${name}`);
   const body = encodeURIComponent(
     `Họ tên: ${name}\nEmail: ${email}\n\n${message}`
   );
   window.location.href = `mailto:nhuhuynh123gd@gmail.com?subject=${subject}&body=${body}`;
 
-  // Reset form
+  // Reset form sau khi gửi
   document.getElementById("contactForm").reset();
 }
 
@@ -101,7 +109,7 @@ function updateActiveNav() {
 window.addEventListener("scroll", updateActiveNav);
 updateActiveNav();
 
-/* --- Nhỏ xinh: hiệu ứng mờ dần cho menu khi mở (CSS keyframe inline) --- */
+/* --- Nhỏ xinh: hiệu ứng mờ dần cho menu khi mở (CSS inline keyframe) --- */
 const style = document.createElement("style");
 style.innerHTML = `
 @keyframes fadeIn {
@@ -110,12 +118,12 @@ style.innerHTML = `
 }`;
 document.head.appendChild(style);
 
-/*Form gửi tin nhắn */
+/* --- Gửi form liên hệ qua Fetch API (nâng cao, không reload trang) --- */
 const form = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
 form.addEventListener("submit", async function (e) {
-  e.preventDefault(); // ngăn reload trang
+  e.preventDefault(); // Ngăn reload
 
   const formData = new FormData(form);
 
@@ -127,8 +135,8 @@ form.addEventListener("submit", async function (e) {
     });
 
     if (response.ok) {
-      form.style.display = "none"; // ẩn form
-      formMessage.style.display = "block"; // hiện thông báo
+      form.style.display = "none"; // Ẩn form
+      formMessage.style.display = "block"; // Hiện thông báo
     } else {
       const data = await response.json();
       alert("Oops! Có lỗi xảy ra: " + (data.error || "Thử lại sau"));
