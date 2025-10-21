@@ -33,9 +33,9 @@ body {
   height: 100%;
 
   /* gradient trôi lửng */
-  background: linear-gradient(135deg, #dc567a, #80e8f6);
-  background-size: 300% 300%;
-  animation: gradientFlow 20s ease infinite;
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -76,10 +76,6 @@ body {
 /* -------------------------
    Header / Navbar
    ------------------------- */
-
-.header {
-  position: relative;
-}
 .site-header {
   position: fixed;
   top: 0;
@@ -232,10 +228,10 @@ body {
   box-shadow: var(--shadow);
   border: 6px solid transparent;
   background: linear-gradient(135deg, #ffd6e0, #dffaf1) padding-box,
-    radial-gradient(circle at top left, #ffb3c9, #b0f2d3) border-box;
+    radial-gradient(circle at top left, #ffb3c9, #b0f2d3) border-box; /* 🎨 viền kiểu vệt màu hội họa */
   transform: translateY(0);
   transition: transform 400ms var(--ease), box-shadow 300ms var(--ease);
-  cursor: pointer; /* bấm được */
+  cursor: pointer; /* 🖱️ bấm được */
 }
 
 /* Hiệu ứng ánh màu khi chạm chuột */
@@ -896,35 +892,4 @@ body {
 }
 .avatar {
   animation: float 6s ease-in-out infinite;
-}
-
-/* 🌸 Responsive cho điện thoại */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .nav-link {
-    font-size: 16px;
-    padding: 5px 10px;
-  }
-
-  .brand {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .brand-avatar {
-    width: 80px;
-    height: 80px;
-  }
 }
