@@ -77,8 +77,8 @@ body {
    Header / Navbar
    ------------------------- */
 header {
-  padding: 1.5rem 0 1rem; /* giảm bớt padding top/bottom */
-  min-height: auto !important;
+  padding: 1.5rem 0 1rem;
+  height: 80px;
 }
 
 /* Giữ cho avatar nhỏ gọn hơn */
