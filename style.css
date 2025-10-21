@@ -162,11 +162,6 @@ body {
 /* -------------------------
    HERO / BANNER
    ------------------------- */
-.hero,
-.banner {
-  padding: 60px 0 40px;
-}
-
 .hero {
   padding: 3.4rem 0;
   background: linear-gradient(
@@ -332,7 +327,7 @@ body {
 }
 
 /* Photo grid */
-/* Hiệu ứng chồng ảnh*/
+/* Hiệu ứng chồng ảnh dễ thương */
 .photo-grid {
   position: relative;
   width: 380px;
@@ -392,7 +387,7 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
-/* Mục tiêu tương lai */
+/* ✨ Mục tiêu tương lai */
 .goal {
   background: linear-gradient(135deg, #fff6e9 0%, #ffe6cc 100%);
   border-radius: 22px;
@@ -762,6 +757,7 @@ body {
 }
 
 /* contact-info card */
+/* 🎀 Contact Info Card */
 .contact-info.card {
   background: linear-gradient(135deg, #ffe4f0 0%, #d7fff5 100%);
   border-radius: 20px;
