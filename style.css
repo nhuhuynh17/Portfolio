@@ -376,6 +376,7 @@ body {
 
 /* Goal */
 .goal {
+  background: linear-gradient(90deg, #ffffff, #ea870f);
   border-radius: 22px;
   padding: 28px 30px;
   width: 95%;
@@ -387,6 +388,7 @@ body {
   overflow: hidden;
 }
 .goal h2 {
+  text-align: center;
   position: relative;
   z-index: 1;
   font-family: "Poppins", sans-serif;
@@ -422,6 +424,8 @@ body {
 
 /* Hobby */
 .hobby {
+  background: linear-gradient(90deg, #fde5f0, #eaeff0, #e0fdf7);
+  text-align: center;
   border-radius: 22px;
   padding: 28px 30px;
   width: 90%;
@@ -563,6 +567,7 @@ body {
   margin-bottom: 0.6rem;
 }
 .contact-info.card {
+  background: linear-gradient(135deg, #ffb6b9, #6bc1ff, #ffe66d);
   border-radius: 20px;
   padding: 25px 30px;
   box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3);
