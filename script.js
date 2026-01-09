@@ -70,6 +70,48 @@ function initSkillScroll() {
 }
 initSkillScroll();
 
+/* --- Tự gõ chữ cho .typing --- */
+function initTyping() {
+  const typingEl = document.querySelector(".typing");
+  if (!typingEl) return;
+
+  const phrases = JSON.parse(
+    typingEl.getAttribute("data-phrases") || '["Hello!"]'
+  );
+  let phraseIndex = 0;
+  let charIndex = 0;
+  const typingDelay = 100;
+  const erasingDelay = 50;
+  const nextPhraseDelay = 1500;
+
+  function type() {
+    if (charIndex < phrases[phraseIndex].length) {
+      typingEl.textContent += phrases[phraseIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
+    } else {
+      setTimeout(erase, nextPhraseDelay);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      typingEl.textContent =
+        phrases[phraseIndex].substring(0, charIndex - 1) || "\u00A0";
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    } else {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      setTimeout(type, typingDelay);
+    }
+  }
+
+  type();
+}
+
+// Khởi tạo khi DOM load xong
+document.addEventListener("DOMContentLoaded", initTyping);
+
 /* --- Xử lý form liên hệ (Demo - dùng mailto) --- */
 function submitContact(ev) {
   ev.preventDefault();
